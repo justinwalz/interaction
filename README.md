@@ -1,16 +1,16 @@
 # Interaction
 
-A golang library for terminal hijacking and REPL-esque command ingestion. Adapted from Google's [seesaw_cli](https://github.com/google/seesaw/blob/master/binaries/seesaw_cli/main.go)
+A golang library to enhance a cli with REPL-esque command execution. Adapted from Google's [seesaw_cli](https://github.com/google/seesaw/blob/master/binaries/seesaw_cli/main.go)
 
 # Usage
 
-You must provide an `execute` function when creating an `Interactor`
+You must provide an `execute` function when creating an `Interactor`, which handles commands as they are parsed.
 
 ```
 func Execute(command string) error
 ```
 
-You can optionally provide a prompt, and a slice of signals to trap and exit.
+You can optionally provide a prompt, and a slice of signals to listen for and initiate an exit.
 ```
 Prompt string
 ExitSignals []os.Signal

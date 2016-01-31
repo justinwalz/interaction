@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/justinwalz/iteraction/interaction"
+	"github.com/justinwalz/interaction/interaction"
 )
 
 func main() {
